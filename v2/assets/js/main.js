@@ -22,11 +22,43 @@
     closeBtn.addEventListener('click', () => setOpen(false));
   }
 
-  /* ---------- Ticker: duplicate for loop ---------- */
-  document.querySelectorAll('.ticker__track').forEach(t => {
-    const clone = t.innerHTML;
-    t.insertAdjacentHTML('beforeend', clone);
-    Array.from(t.children).slice(t.children.length / 2).forEach(el => el.setAttribute('aria-hidden', 'true'));
+  /* ---------- Marquee: 자동 흐름, 마우스 올리면 정지, 드래그·가로 휠로 이동 ---------- */
+  document.querySelectorAll('[data-marquee]').forEach(box => {
+    const track = box.querySelector('.marquee__track');
+    const items = Array.from(track.children);
+    const speed = reduce ? 0 : parseFloat(box.dataset.marquee); // px/s
+    let setW = 0, x = 0, cur = speed, hover = false, drag = null, last = performance.now(), boxW = 0;
+    const build = () => {
+      if (box.clientWidth === boxW) return;
+      boxW = box.clientWidth;
+      track.querySelectorAll('[data-clone]').forEach(el => el.remove());
+      setW = track.scrollWidth;
+      const copies = Math.ceil(boxW / setW) + 1;
+      for (let i = 0; i < copies; i++) items.forEach(el => {
+        const cl = el.cloneNode(true); cl.dataset.clone = ''; cl.setAttribute('aria-hidden', 'true'); track.appendChild(cl);
+      });
+    };
+    build();
+    window.addEventListener('resize', build);
+    const tick = now => {
+      const dt = Math.min((now - last) / 1000, 0.1); last = now;
+      cur += ((hover || drag ? 0 : speed) - cur) * Math.min(dt * 6, 1);
+      if (!drag) x -= cur * dt;
+      x = ((x % setW) + setW) % setW - setW;
+      track.style.transform = `translate3d(${x}px,0,0)`;
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    box.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hover = true; });
+    box.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hover = false; });
+    box.addEventListener('pointerdown', e => { drag = { sx: e.clientX, x0: x }; box.setPointerCapture(e.pointerId); box.classList.add('is-drag'); });
+    box.addEventListener('pointermove', e => { if (drag) x = drag.x0 + e.clientX - drag.sx; });
+    const end = () => { drag = null; box.classList.remove('is-drag'); };
+    box.addEventListener('pointerup', end);
+    box.addEventListener('pointercancel', end);
+    box.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { e.preventDefault(); x -= e.deltaX; }
+    }, { passive: false });
   });
 
   /* ---------- Manifesto: split words ---------- */
