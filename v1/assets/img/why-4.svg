@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="1120" height="840" font-family="Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#14b8a6"/></linearGradient><filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1e3a8a" flood-opacity=".16"/></filter>
+  <symbol id="u" viewBox="0 0 40 44"><circle cx="20" cy="13" r="11"/><path d="M2 44 c0-14 8-22 18-22 s18 8 18 22 z"/></symbol></defs>
+  <rect width="560" height="420" fill="#f0ecff"/>
+  <circle cx="90" cy="60" r="100" fill="#fff" opacity=".6"/>
+  <g filter="url(#s)"><circle cx="290" cy="220" r="128" fill="#fff"/></g>
+  <circle cx="290" cy="220" r="96" fill="#c7d2fe"/>
+  <circle cx="290" cy="220" r="64" fill="#fff"/>
+  <circle cx="290" cy="220" r="32" fill="url(#g)"/>
+  <line x1="296" y1="214" x2="428" y2="82" stroke="#0b1220" stroke-width="7" stroke-linecap="round"/>
+  <path d="M422 70 l32 -10 l-10 32 l-10 -12 z" fill="#fbbf24"/>
+  <circle cx="296" cy="214" r="7" fill="#0b1220"/>
+  <g filter="url(#s)"><rect x="40" y="118" width="156" height="46" rx="23" fill="#fff"/></g>
+  <circle cx="64" cy="141" r="8" fill="#2563eb"/><text x="80" y="147" font-size="15" font-weight="700" fill="#0b1220">#게임 결제자</text>
+  <g filter="url(#s)"><rect x="56" y="296" width="150" height="46" rx="23" fill="#fff"/></g>
+  <circle cx="80" cy="319" r="8" fill="#14b8a6"/><text x="96" y="325" font-size="15" font-weight="700" fill="#0b1220">#7일 미접속</text>
+  <g filter="url(#s)"><rect x="366" y="316" width="160" height="46" rx="23" fill="#fff"/></g>
+  <circle cx="390" cy="339" r="8" fill="#fb7185"/><text x="406" y="345" font-size="15" font-weight="700" fill="#0b1220">#고가치 유저</text>
+  <path d="M482 186 l5 13 l13 5 l-13 5 l-5 13 l-5-13 l-13-5 l13-5 z" fill="#fbbf24" opacity="1"/>
+  <circle cx="200" cy="384" r="6" fill="#8b5cf6" opacity=".4"/>
+</svg>

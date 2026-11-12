@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="1280" height="920" font-family="Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8f0ff"/><stop offset="1" stop-color="#ddf7f1"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1e3a8a" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="640" height="460" fill="url(#bg)"/>
+  <circle cx="575" cy="60" r="110" fill="#fff" opacity=".55"/>
+  <circle cx="40" cy="430" r="130" fill="#fff" opacity=".45"/>
+  <path d="M60 330 C 120 300, 150 250, 230 236" stroke="#2563eb" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" fill="none" opacity=".5"/>
+
+  <!-- phone -->
+  <g filter="url(#s)"><rect x="262" y="40" width="196" height="384" rx="36" fill="#0b1220"/></g>
+  <rect x="272" y="50" width="176" height="364" rx="28" fill="#fff"/>
+  <rect x="333" y="60" width="54" height="11" rx="5.5" fill="#0b1220"/>
+  <text x="290" y="104" font-size="14" font-weight="800" fill="#0b1220">Top Charts</text>
+  <rect x="404" y="92" width="28" height="16" rx="8" fill="#e8f0ff"/><text x="418" y="104" font-size="9" font-weight="700" fill="#2563eb" text-anchor="middle">KR</text>
+  <rect x="282" y="118" width="156" height="58" rx="16" fill="#eef4ff"/>
+  <text x="294" y="153" font-size="17" font-weight="800" fill="#2563eb">1</text>
+  <rect x="312" y="131" width="32" height="32" rx="10" fill="url(#g)"/>
+  <path d="M319 152 q5-10 9 0 t9 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="352" y="137" width="48" height="7" rx="3.5" fill="#0b1220"/>
+  <rect x="352" y="150" width="30" height="6" rx="3" fill="#94a3b8"/>
+  <path d="M412 155 l8-11 l8 11 z" fill="#14b8a6"/>
+  <g font-size="14" font-weight="700" fill="#94a3b8">
+    <text x="294" y="208">2</text><text x="294" y="258">3</text><text x="294" y="308">4</text><text x="294" y="358">5</text>
+  </g>
+  <rect x="312" y="190" width="32" height="32" rx="10" fill="#fde68a"/><rect x="352" y="196" width="52" height="7" rx="3.5" fill="#cbd5e1"/><rect x="352" y="209" width="34" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="312" y="240" width="32" height="32" rx="10" fill="#fecdd3"/><rect x="352" y="246" width="44" height="7" rx="3.5" fill="#cbd5e1"/><rect x="352" y="259" width="28" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="312" y="290" width="32" height="32" rx="10" fill="#c7d2fe"/><rect x="352" y="296" width="56" height="7" rx="3.5" fill="#cbd5e1"/><rect x="352" y="309" width="36" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="312" y="340" width="32" height="32" rx="10" fill="#bbf7d0"/><rect x="352" y="346" width="40" height="7" rx="3.5" fill="#cbd5e1"/><rect x="352" y="359" width="26" height="6" rx="3" fill="#e2e8f0"/>
+
+  <!-- ROAS card -->
+  <g filter="url(#s)"><rect x="92" y="78" width="200" height="140" rx="22" fill="#fff"/></g>
+  <text x="114" y="108" font-size="12" font-weight="700" fill="#64748b" letter-spacing="1">ROAS</text>
+  <text x="114" y="138" font-size="26" font-weight="800" fill="#0b1220">+312%</text>
+  <rect x="114" y="176" width="24" height="22" rx="7" fill="#dbeafe"/>
+  <rect x="146" y="166" width="24" height="32" rx="7" fill="#bfdbfe"/>
+  <rect x="178" y="152" width="24" height="46" rx="7" fill="#93c5fd"/>
+  <rect x="210" y="128" width="24" height="70" rx="7" fill="url(#g)"/>
+  <circle cx="262" cy="110" r="14" fill="#dcfce7"/><path d="M256 113 l6-7 l6 7" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- purchase notification -->
+  <g filter="url(#s)"><rect x="404" y="168" width="200" height="68" rx="20" fill="#fff"/></g>
+  <circle cx="436" cy="202" r="18" fill="#fbbf24"/><text x="436" y="208" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">₩</text>
+  <text x="464" y="197" font-size="14" font-weight="800" fill="#0b1220">구매 완료</text>
+  <text x="464" y="217" font-size="12" font-weight="600" fill="#64748b">₩29,000 · 방금</text>
+
+  <!-- coins -->
+  <g>
+    <ellipse cx="540" cy="398" rx="36" ry="13" fill="#d97706"/><rect x="504" y="386" width="72" height="12" fill="#f59e0b"/><ellipse cx="540" cy="386" rx="36" ry="13" fill="#fbbf24"/>
+    <ellipse cx="540" cy="374" rx="36" ry="13" fill="#d97706"/><rect x="504" y="362" width="72" height="12" fill="#f59e0b"/><ellipse cx="540" cy="362" rx="36" ry="13" fill="#fbbf24"/>
+    <ellipse cx="540" cy="350" rx="36" ry="13" fill="#d97706"/><rect x="504" y="338" width="72" height="12" fill="#f59e0b"/><ellipse cx="540" cy="338" rx="36" ry="13" fill="#fcd34d"/>
+    <text x="540" y="343" font-size="13" font-weight="800" fill="#b45309" text-anchor="middle">₩</text>
+  </g>
+  <!-- sparkles -->
+  <path d="M492 104 l5 13 l13 5 l-13 5 l-5 13 l-5-13 l-13-5 l13-5 z" fill="#fbbf24"/>
+  <path d="M214 282 l3 8 l8 3 l-8 3 l-3 8 l-3-8 l-8-3 l8-3 z" fill="#14b8a6"/>
+  <circle cx="602" cy="290" r="6" fill="#2563eb" opacity=".35"/>
+  <circle cx="230" cy="380" r="5" fill="#fb7185" opacity=".6"/>
+</svg>

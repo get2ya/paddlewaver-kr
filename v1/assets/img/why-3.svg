@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="1120" height="840" font-family="Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#14b8a6"/></linearGradient><filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1e3a8a" flood-opacity=".16"/></filter>
+  <symbol id="u" viewBox="0 0 40 44"><circle cx="20" cy="13" r="11"/><path d="M2 44 c0-14 8-22 18-22 s18 8 18 22 z"/></symbol></defs>
+  <rect width="560" height="420" fill="#fff1e8"/>
+  <circle cx="500" cy="380" r="120" fill="#fff" opacity=".6"/>
+  <use href="#u" x="70" y="80" width="40" height="44" fill="#93c5fd"/><use href="#u" x="140" y="80" width="40" height="44" fill="#5eead4"/><use href="#u" x="210" y="70" width="40" height="44" fill="#fcd34d"/><use href="#u" x="460" y="70" width="40" height="44" fill="#93c5fd"/><use href="#u" x="70" y="180" width="40" height="44" fill="#fcd34d"/><use href="#u" x="140" y="180" width="40" height="44" fill="#93c5fd"/><use href="#u" x="470" y="190" width="40" height="44" fill="#5eead4"/><use href="#u" x="70" y="290" width="40" height="44" fill="#5eead4"/><use href="#u" x="140" y="290" width="40" height="44" fill="#fcd34d"/><use href="#u" x="200" y="330" width="40" height="44" fill="#93c5fd"/><use href="#u" x="470" y="300" width="40" height="44" fill="#fcd34d"/>
+  <g filter="url(#s)">
+    <rect x="384" y="268" width="34" height="100" rx="17" fill="#0b1220" transform="rotate(-45 401 318)"/>
+    <circle cx="320" cy="200" r="96" fill="#fff"/>
+  </g>
+  <circle cx="320" cy="200" r="96" fill="none" stroke="#0b1220" stroke-width="16"/>
+  <line x1="320" y1="136" x2="320" y2="152" stroke="#fb7185" stroke-width="5" stroke-linecap="round"/><circle cx="320" cy="132" r="7" fill="#fb7185"/>
+  <rect x="276" y="152" width="88" height="76" rx="22" fill="#fb7185"/>
+  <circle cx="302" cy="186" r="10" fill="#fff"/><circle cx="338" cy="186" r="10" fill="#fff"/>
+  <circle cx="302" cy="186" r="4.5" fill="#0b1220"/><circle cx="338" cy="186" r="4.5" fill="#0b1220"/>
+  <rect x="300" y="208" width="40" height="6" rx="3" fill="#fff"/>
+  <rect x="290" y="234" width="60" height="22" rx="8" fill="#fda4af"/>
+  <g filter="url(#s)"><rect x="366" y="62" width="130" height="44" rx="22" fill="#e11d48"/></g>
+  <circle cx="390" cy="84" r="11" fill="#fff"/><path d="M385 79 l10 10 m0-10 l-10 10" stroke="#e11d48" stroke-width="3" stroke-linecap="round"/>
+  <text x="408" y="90" font-size="15" font-weight="800" fill="#fff">BOT 차단</text>
+</svg>
