@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>패들웨이버 한글 BI 시안</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="bi-icon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    :root { --ink: #0b1220; --mute: #64748b; --line: #e2e8f0; --gutter: 20px; }
+    @media (min-width: 768px) { :root { --gutter: 40px; } }
+    * { box-sizing: border-box; margin: 0; }
+    body { font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif; color: var(--ink); background: #f4f7fb; word-break: keep-all; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--gutter); }
+    header { padding: 48px 0 32px; }
+    header a { font-size: 14px; color: var(--mute); text-decoration: none; }
+    h1 { margin-top: 20px; font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -.04em; }
+    .sub { margin-top: 10px; color: var(--mute); line-height: 1.6; }
+    .opt { margin-top: 28px; background: #fff; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+    .opt__head { padding: 24px 28px 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+    .opt__head b { font-size: 13px; color: #fff; background: var(--ink); padding: 4px 10px; border-radius: 999px; }
+    .opt__head h2 { font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+    .opt__head span { font-size: 14px; color: var(--mute); }
+    .opt p { padding: 8px 28px 0; font-size: 15px; line-height: 1.7; color: #475569; }
+    .stage { margin-top: 20px; display: grid; }
+    .stage div { display: grid; place-items: center; padding: 40px 24px; min-height: 200px; }
+    .stage img { max-width: 100%; height: auto; max-height: 120px; }
+    .stage .tall img { max-height: 190px; }
+    .stage .dark { background: #0b1220; }
+    .stage .light { background: #fff; border-top: 1px solid var(--line); }
+    @media (min-width: 768px) { .stage { grid-template-columns: 1fr 1fr; } .stage .light { border-top: 0; border-right: 1px solid var(--line); } }
+    .dl { padding: 16px 28px 24px; font-size: 13px; color: var(--mute); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+    .mock { margin-top: 20px; border-top: 1px solid var(--line); background: #fff; }
+    .mock__bar { height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; border-bottom: 1px solid var(--line); }
+    .mock__bar img { height: 38px; width: auto; }
+    .mock__bar nav { display: none; gap: 28px; font-size: 14px; font-weight: 600; color: #475569; }
+    .mock__bar i { font-style: normal; font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(100deg, #2563eb, #14b8a6); padding: 9px 16px; border-radius: 999px; }
+    @media (min-width: 900px) { .mock__bar nav { display: flex; } }
+    .notes { margin: 40px 0 72px; padding: 28px; border-radius: 24px; background: #fff; border: 1px solid var(--line); }
+    .notes h2 { font-size: 20px; font-weight: 800; }
+    .notes ol { margin-top: 12px; padding-left: 20px; line-height: 1.8; color: #475569; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="../index.html">← 웹사이트 시안 목록</a>
+      <h1>패들웨이버 한글 BI 시안</h1>
+      <p class="sub">본사 심볼(원 4개가 이어진 노드)을 유지하고, 한글 워드마크를 붙인 4가지 방향입니다. 한글 서체는 Pretendard(SIL OFL, 상업 사용 가능)를 윤곽선으로 변환해 폰트 없이도 똑같이 보입니다.</p>
+    </header>
+
+    <section class="opt">
+      <div class="opt__head"><b>A</b><h2>본사 로고 한글화</h2><span>구성·색을 그대로 유지</span></div>
+      <p>본사 로고의 회청색 심볼, 가는 글자, 밑줄 바를 그대로 두고 영문만 한글로 바꿨습니다. 본사와 가장 일관되지만, 한글은 획이 많아 심볼과 겹치는 부분이 읽기 어렵습니다.</p>
+      <div class="stage"><div class="light"><img src="bi-a.svg" alt="A안"></div><div style="background:#f4f7fb"><img src="../imgs/logo.svg" alt="본사 로고(비교용)"></div></div>
+      <div class="dl">오른쪽은 비교용 본사 로고 · <a href="bi-a.svg" download>bi-a.svg</a></div>
+    </section>
+
+    <section class="opt">
+      <div class="opt__head"><b>B</b><h2>가로형 워드마크</h2><span>추천 · 웹사이트 헤더용</span></div>
+      <p>심볼을 겹치지 않게 왼쪽에 두고 블루→청록 그라디언트를 입혔습니다. 굵은 한글과 작은 영문(PADDLEWAVER KOREA)을 같이 써서 작은 크기에서도 잘 읽힙니다. 시안 1·3의 색과 같습니다.</p>
+      <div class="stage"><div class="light"><img src="bi-b.svg" alt="B안"></div><div class="dark"><img src="bi-b-white.svg" alt="B안 어두운 배경"></div></div>
+      <div class="mock"><div class="mock__bar"><img src="bi-b.svg" alt=""><nav><span>UA 마케팅</span><span>앱 리타게팅</span><span>CTV & 애드 익스체인지</span></nav><i>도입 문의</i></div></div>
+      <div class="dl">위: 헤더에 넣었을 때 · <a href="bi-b.svg" download>bi-b.svg</a> <a href="bi-b-white.svg" download>bi-b-white.svg</a></div>
+    </section>
+
+    <section class="opt">
+      <div class="opt__head"><b>C</b><h2>시그니처 워드마크</h2><span>글자만으로 기억되는 로고</span></div>
+      <p>'이'의 ㅇ을 심볼의 동그라미처럼 그라디언트로 칠했습니다. 심볼 없이 글자만으로도 브랜드가 드러나서 배너·영상 자막·굿즈처럼 공간이 좁은 곳에 좋습니다.</p>
+      <div class="stage"><div class="light"><img src="bi-c.svg" alt="C안"></div><div class="dark"><img src="bi-c-white.svg" alt="C안 어두운 배경"></div></div>
+      <div class="dl"><a href="bi-c.svg" download>bi-c.svg</a> <a href="bi-c-white.svg" download>bi-c-white.svg</a></div>
+    </section>
+
+    <section class="opt">
+      <div class="opt__head"><b>D</b><h2>세로형 · 앱 아이콘</h2><span>명함, SNS 프로필, 파비콘</span></div>
+      <p>B안을 세로로 쌓은 버전과, 심볼만 쓴 정사각 아이콘입니다. B안과 함께 한 세트로 쓰는 것을 전제로 했습니다.</p>
+      <div class="stage"><div class="light tall"><img src="bi-d.svg" alt="D안 세로형"></div><div class="tall" style="background:#f4f7fb"><img src="bi-icon.svg" alt="앱 아이콘" style="max-height:150px"></div></div>
+      <div class="dl"><a href="bi-d.svg" download>bi-d.svg</a> <a href="bi-icon.svg" download>bi-icon.svg</a></div>
+    </section>
+
+    <section class="notes">
+      <h2>확정 전 확인할 것</h2>
+      <ol>
+        <li>본사 승인: 심볼 색(회청색 → 블루·청록) 변경과 한글 표기 '패들웨이버'를 본사가 허용하는지 확인이 필요합니다.</li>
+        <li>상표: 한글 워드마크를 쓰려면 한국 특허청 상표 출원(국문·영문 병기)을 검토하세요.</li>
+        <li>원본 심볼: 본사 로고는 이미지(PNG)를 감싼 SVG라서 심볼은 벡터로 다시 그렸습니다. 본사에 원본 벡터(AI/SVG) 파일을 요청하면 더 정확해집니다.</li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>
