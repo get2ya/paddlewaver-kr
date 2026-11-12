@@ -150,27 +150,6 @@
     });
   }
 
-  /* ---------- Services: cursor image preview (PC hover) ---------- */
-  const cursor = document.querySelector('.cursor-img');
-  if (cursor) {
-    mm.add('(hover: hover) and (min-width: 1280px)', () => {
-      const xTo = gsap.quickTo(cursor, 'x', { duration: 0.6, ease: 'power3' });
-      const yTo = gsap.quickTo(cursor, 'y', { duration: 0.6, ease: 'power3' });
-      const imgs = cursor.querySelectorAll('img');
-      const move = e => { xTo(e.clientX); yTo(e.clientY); };
-      window.addEventListener('mousemove', move);
-      const rows = document.querySelectorAll('.svc');
-      rows.forEach((row, i) => {
-        row.addEventListener('mouseenter', () => {
-          imgs.forEach((im, k) => im.classList.toggle('is-on', k === i));
-          gsap.to(cursor, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'power3.out' });
-        });
-        row.addEventListener('mouseleave', () => gsap.to(cursor, { autoAlpha: 0, scale: 0.8, duration: 0.3 }));
-      });
-      return () => window.removeEventListener('mousemove', move);
-    });
-  }
-
   /* ---------- Sub page: sticky index ---------- */
   if (ixItems.length) {
     ixList.forEach((li, i) => li.querySelector('button').addEventListener('click', () => scrollToEl(ixItems[i])));
