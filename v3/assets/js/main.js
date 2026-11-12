@@ -22,7 +22,7 @@
     closeBtn.addEventListener('click', () => setOpen(false));
   }
 
-  /* ---------- Marquee: 자동 흐름, 마우스 올리면 정지, 드래그·가로 휠로 이동 ---------- */
+  /* ---------- Marquee: 자동 흐름, 마우스 올리면 느려짐, 드래그·가로 휠로 이동 ---------- */
   document.querySelectorAll('[data-marquee]').forEach(box => {
     const track = box.querySelector('.marquee__track');
     const items = Array.from(track.children);
@@ -42,7 +42,7 @@
     window.addEventListener('resize', build);
     const tick = now => {
       const dt = Math.min((now - last) / 1000, 0.1); last = now;
-      cur += ((hover || drag ? 0 : speed) - cur) * Math.min(dt * 6, 1);
+      cur += ((drag ? 0 : hover ? speed * 0.3 : speed) - cur) * Math.min(dt * 6, 1);
       if (!drag) x -= cur * dt;
       x = ((x % setW) + setW) % setW - setW;
       track.style.transform = `translate3d(${x}px,0,0)`;
@@ -170,15 +170,32 @@
     });
   }
 
-  /* ---------- Stacking panels: 이전 패널이 살짝 작아지며 어두워짐 ---------- */
-  const panels = gsap.utils.toArray('.panel');
-  if (panels.length) {
+  /* ---------- Pillars: 고정 + 가로 스크롤 (시안 1 방식) ---------- */
+  const hs = document.querySelector('.hs');
+  if (hs) {
+    const track = hs.querySelector('.hs__track');
+    const bar = hs.querySelector('.hs__progress i');
     mm.add(PAD_UP, () => {
-      const tws = panels.slice(0, -1).map((p, i) => gsap.to(p.querySelector('.panel__inner'), {
-        scale: 0.92, autoAlpha: 0.35, ease: 'none',
-        scrollTrigger: { trigger: panels[i + 1], start: 'top bottom', end: 'top top', scrub: true }
-      }));
-      return () => tws.forEach(t => t.scrollTrigger && t.scrollTrigger.kill());
+      const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
+      const tween = gsap.to(track, {
+        x: () => -distance(), ease: 'none',
+        scrollTrigger: {
+          trigger: hs, start: 'top top', end: () => '+=' + distance(),
+          pin: true, scrub: 1, invalidateOnRefresh: true,
+          onUpdate: self => bar && gsap.set(bar, { scaleX: self.progress })
+        }
+      });
+      return () => tween.scrollTrigger && tween.scrollTrigger.kill();
+    });
+    mm.add(MOBILE, () => {
+      const vp = hs.querySelector('.hs__viewport');
+      const update = () => {
+        const max = vp.scrollWidth - vp.clientWidth;
+        bar && gsap.set(bar, { scaleX: max > 0 ? vp.scrollLeft / max : 0 });
+      };
+      vp.addEventListener('scroll', update, { passive: true });
+      update();
+      return () => vp.removeEventListener('scroll', update);
     });
   }
 
