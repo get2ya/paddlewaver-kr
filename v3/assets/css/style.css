@@ -412,3 +412,8 @@ html.lenis, html.lenis body { height: auto; }
 
 /* 모바일 히어로 메타는 한 줄만 */
 @media (max-width: 767px) { .hero__meta .label:not(:first-child) { display: none; } }
+
+/* 헤더 우측: 로그인(대시보드) + 문의 + 메뉴 */
+.header__actions { display: flex; align-items: center; gap: 12px; }
+.header__login { height: 36px; padding: 0 14px; font-size: 13px; }
+@media (min-width: 768px) { .header__login { height: 40px; padding: 0 18px; font-size: 14px; } }

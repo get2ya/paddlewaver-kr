@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대시보드 로그인 | PaddleWaver Korea</title>
+  <meta name="description" content="PaddleWaver 광고주·퍼블리셔 대시보드 로그인">
+  <link rel="icon" href="imgs/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    :root { --ink: #0b1220; --mute: #64748b; --line: rgba(11, 18, 32, .1); --accent: #2563eb; --teal: #14b8a6; --grad: linear-gradient(100deg, #2563eb 0%, #14b8a6 100%); }
+    * { box-sizing: border-box; margin: 0; }
+    body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; font-family: "Pretendard Variable", Pretendard, -apple-system, "Malgun Gothic", sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased;
+      background: radial-gradient(60% 50% at 85% 0%, rgba(20, 184, 166, .12), transparent 70%), radial-gradient(50% 50% at 0% 100%, rgba(37, 99, 235, .1), transparent 70%), #f4f7fb; }
+    a { color: inherit; text-decoration: none; }
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 20px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo img { height: 34px; width: auto; }
+    .kr { font-size: 11px; font-weight: 800; letter-spacing: .08em; color: #fff; background: #e11d48; padding: 4px 8px; border-radius: 6px; }
+    .back { font-size: 14px; font-weight: 500; color: var(--mute); }
+    .back:hover { color: var(--ink); }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+    .label { font-size: 13px; font-weight: 700; letter-spacing: .12em; color: var(--accent); }
+    h1 { margin-top: 12px; font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -.04em; line-height: 1.15; }
+    .lead { margin-top: 12px; font-size: 16px; color: var(--mute); }
+    .choices { margin-top: 40px; display: grid; gap: 16px; }
+    .choice { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 28px; background: #fff; border: 1.5px solid var(--line); border-radius: 24px; box-shadow: 0 20px 50px -34px rgba(15, 23, 42, .4); transition: transform .4s cubic-bezier(.2, .7, .1, 1), border-color .3s, box-shadow .4s; }
+    .choice:hover, .choice:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 30px 60px -30px rgba(37, 99, 235, .45); outline: none; }
+    .ico { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; }
+    .ico svg { width: 28px; height: 28px; }
+    .choice h2 { margin-top: 8px; font-size: 26px; font-weight: 800; letter-spacing: -.03em; }
+    .choice h2 small { margin-left: 8px; font-size: 14px; font-weight: 600; color: var(--mute); letter-spacing: 0; }
+    .choice p { font-size: 15px; line-height: 1.6; color: #475569; }
+    .go { margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--accent); }
+    .go i { font-style: normal; transition: transform .3s; }
+    .choice:hover .go i { transform: translateX(4px); }
+    .note { margin-top: 28px; font-size: 13px; color: var(--mute); }
+    .note a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    @media (min-width: 768px) {
+      .top { padding: 24px 40px; }
+      .choices { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .choice { padding: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="index.html" aria-label="PaddleWaver Korea"><img src="imgs/logo.svg" alt="PaddleWaver" width="1024" height="315"><span class="kr">KOREA</span></a>
+    <a class="back" href="index.html" onclick="if (document.referrer && history.length > 1) { history.back(); return false; }">← 돌아가기</a>
+  </header>
+  <main>
+    <p class="label">DASHBOARD LOGIN</p>
+    <h1>어떤 계정으로<br>로그인하시나요?</h1>
+    <p class="lead">이용하실 대시보드를 선택해 주세요.</p>
+    <div class="choices">
+      <a class="choice" href="http://35.73.224.111:8010/">
+        <span class="ico" style="background:#e8f0ff;color:#2563eb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span>
+        <h2>광고주<small>Advertiser</small></h2>
+        <p>캠페인을 만들고 예산을 집행하며, 설치·결제 성과와 ROAS 리포트를 확인합니다.</p>
+        <span class="go">광고주 대시보드로 <i>→</i></span>
+      </a>
+      <a class="choice" href="http://35.73.224.111:8001/">
+        <span class="ico" style="background:#e3faf5;color:#0d9488"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 14h3"/><path d="M8 17h6"/></svg></span>
+        <h2>퍼블리셔<small>Publisher</small></h2>
+        <p>앱·CTV 광고 지면을 등록하고 관리하며, 노출과 수익 현황을 확인합니다.</p>
+        <span class="go">퍼블리셔 대시보드로 <i>→</i></span>
+      </a>
+    </div>
+    <p class="note">계정이 없으신가요? <a href="mailto:business@paddlewaver.com">business@paddlewaver.com</a>으로 문의해 주세요.</p>
+  </main>
+</body>
+</html>

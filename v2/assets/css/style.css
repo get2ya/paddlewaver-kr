@@ -293,3 +293,9 @@ html.lenis, html.lenis body { height: auto; }
   .manifesto__sticky { position: relative; height: auto; padding-top: 96px; padding-bottom: 96px; }
   .manifesto__text .w { color: var(--ink); }
 }
+
+/* 헤더 우측: 로그인(대시보드) + 문의 + 메뉴 */
+.header__actions { display: flex; align-items: center; gap: 12px; }
+.header__login { font-size: 13px; font-weight: 500; padding: 6px 14px; border: 1px solid currentColor; border-radius: 999px; transition: background .3s, color .3s; }
+.header__login:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+@media (min-width: 1280px) { .header__actions { gap: 24px; } .header__login { font-size: 14px; } }

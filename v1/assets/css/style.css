@@ -336,3 +336,8 @@ html.lenis, html.lenis body { height: auto; }
 /* back-to-proposals pill */
 .proposal-pill { position: fixed; left: 16px; bottom: 16px; z-index: 70; padding: 10px 14px; border-radius: 999px; background: #0b1220; color: #fff; font-size: 12px; font-weight: 600; box-shadow: 0 8px 24px rgba(0, 0, 0, .25); }
 .proposal-pill:hover { background: #2563eb; }
+
+/* 헤더 우측: 로그인(대시보드) + 문의 + 메뉴 */
+.header__actions { display: flex; align-items: center; gap: 12px; }
+.header__login { height: 36px; padding: 0 14px; font-size: 13px; }
+@media (min-width: 768px) { .header__login { height: 40px; padding: 0 18px; font-size: 14px; } }
